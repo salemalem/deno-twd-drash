@@ -5,12 +5,12 @@ const decoder = new TextDecoder();
 export default class ContactResource extends Drash.Http.Resource {
 
   static paths = [
-    "/about"
+    "/contact"
   ];
 
   GET() {
     try {
-      let fileContentsRaw = Deno.readFileSync("./about.html");
+      let fileContentsRaw = Deno.readFileSync(Deno.cwd() + "/public/contact.html");
       let template = decoder.decode(fileContentsRaw);
       this.response.body = template;
     } catch (error) {

@@ -4,7 +4,7 @@
   <!-- ... -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="/public/styles.css" rel="stylesheet">
+  <link href="public/styles.css" rel="stylesheet">
 </head>
 <body class="dark:bg-gray-900">
   <!-- Menu -->
@@ -48,88 +48,47 @@
 
 <!-- Content start -->
 
-<section class="container px-6 py-4 mx-auto">
-  <div class="grid gap-6 mb-8 md:grid-cols-1 lg:grid-cols-2">
-    <!-- Card 1 -->
-    <div class="flex items-center p-4 border-1 border-gray-800 rounded-lg shadow-sm dark:bg-gray-800">
-        <img alt="mountain" class="w-45 rounded-md border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
-         <div id="body" class="flex flex-col ml-5">
-            <h4 id="name" class="text-xl font-semibold mb-2 dark:text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-            <p id="job" class="text-gray-800 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <div class="flex mt-5">
-               <img alt="avatar" class="w-6 rounded-full border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
-               <p class="ml-3 dark:text-gray-300">John Doe</p>
-            </div>
-         </div>
-    </div>
-    <!-- Card 2 -->
-    <div class="flex items-center p-4 border-1 border-gray-800 rounded-lg shadow-sm dark:bg-gray-800">
-      <img alt="mountain" class="w-45 rounded-md border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
-       <div id="body" class="flex flex-col ml-5">
-          <h4 id="name" class="text-xl font-semibold mb-2 dark:text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-          <p id="job" class="text-gray-800 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="flex mt-5">
-             <img alt="avatar" class="w-6 rounded-full border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
-             <p class="ml-3 dark:text-gray-300">John Doe</p>
-          </div>
-       </div>
-  </div>
-    <!-- Card 3 -->
-    <div class="flex items-center p-4 border-1 border-gray-800 rounded-lg shadow-sm dark:bg-gray-800">
-      <img alt="mountain" class="w-45 rounded-md border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
-       <div id="body" class="flex flex-col ml-5">
-          <h4 id="name" class="text-xl font-semibold mb-2 dark:text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-          <p id="job" class="text-gray-800 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="flex mt-5">
-             <img alt="avatar" class="w-6 rounded-full border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
-             <p class="ml-3 dark:text-gray-300">John Doe</p>
-          </div>
-       </div>
-  </div>
-    <!-- Card 4 -->
-    <div class="flex items-center p-4 border-1 border-gray-800 rounded-lg shadow-sm dark:bg-gray-800">
-      <img alt="mountain" class="w-45 rounded-md border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
-       <div id="body" class="flex flex-col ml-5">
-          <h4 id="name" class="text-xl font-semibold mb-2 dark:text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-          <p id="job" class="text-gray-800 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="flex mt-5">
-             <img alt="avatar" class="w-6 rounded-full border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
-             <p class="ml-3 dark:text-gray-300">John Doe</p>
-          </div>
-       </div>
-  </div>
-  </div>
-</section>
+<!-- wrapper -->
+<div class="relative p-5 lg:px-20 flex flex-col md:flex-row items-center justify-center text-gray-100">  
 
-<!-- Subscribe to our email -->
-  <!-- card wrapper -->
-  <div class="wrapper bg-green-800 rounded-sm shadow-lg w-full">
-      <div class="container px-4 mx-auto">
-        <div class="card px-8 py-4">
-            <div class="card-image mt-10 mb-6">
-                <svg 
-                    class="w-10 h-10 text-orange-500 fill-current text-yellow-100"
-                    xmlns="http://www.w3.org/2000/svg" 
-                    width="512" height="512.002" 
-                    viewBox="0 0 512 512.002">
-                    <g transform="translate(0 0.002)">
-                        <path d="M64,257.6,227.9,376a47.72,47.72,0,0,0,56.2,0L448,257.6V96a32,32,0,0,0-32-32H96A32,32,0,0,0,64,96ZM160,160a16,16,0,0,1,16-16H336a16,16,0,0,1,16,16v16a16,16,0,0,1-16,16H176a16,16,0,0,1-16-16Zm0,80a16,16,0,0,1,16-16H336a16,16,0,0,1,16,16v16a16,16,0,0,1-16,16H176a16,16,0,0,1-16-16Z" opacity="0.4"/><path d="M352,160a16,16,0,0,0-16-16H176a16,16,0,0,0-16,16v16a16,16,0,0,0,16,16H336a16,16,0,0,0,16-16Zm-16,64H176a16,16,0,0,0-16,16v16a16,16,0,0,0,16,16H336a16,16,0,0,0,16-16V240A16,16,0,0,0,336,224ZM329.4,41.4C312.6,29.2,279.2-.3,256,0c-23.2-.3-56.6,29.2-73.4,41.4L152,64H360ZM64,129c-23.9,17.7-42.7,31.6-45.6,34A48,48,0,0,0,0,200.7v10.7l64,46.2Zm429.6,34c-2.9-2.3-21.7-16.3-45.6-33.9V257.6l64-46.2V200.7A48,48,0,0,0,493.6,163ZM256,417.1a79.989,79.989,0,0,1-46.888-15.192L0,250.9V464a48,48,0,0,0,48,48H464a48,48,0,0,0,48-48V250.9l-209.1,151A80,80,0,0,1,256,417.1Z"/>
-                    </g>
-                </svg>
-            </div>
-
-            <div class="card-text">
-                <h1 class="text-xl md:text-2xl font-bold leading-tight text-gray-100">Get the latest tutorials right into your inbox!</h1>
-                <p class="text-base md:text-lg text-gray-200 mt-3 ">Join 4k+ happy subscribers!</p>
-            </div>
-
-            <div class="card-mail flex items-center my-10">
-                <input type="email" class="border-l border-t border-b border-gray-200 rounded-l-md w-full text-base md:text-lg px-3 py-2" placeholder="Enter Your Email">
-                <button class="bg-orange-500 hover:bg-orange-600 hover:border-orange-600 text-white font-bold capitalize px-3 py-2 text-base md:text-lg rounded-r-md border-t border-r border-b border-orange-500">subscribe</button>
-            </div>
-        </div>
+  <!-- Contact Me -->
+  <form action="#" class="w-full md:w-1/2 border border-green-500 p-6 bg-gray-900">
+  <h2 class="text-2xl pb-3 font-semibold">
+      Send Message | We are available 24/7
+  </h2>
+  <div>
+      <div class="flex flex-col mb-3">
+      <label for="name">Name</label>
+      <input 
+          type="text" id="name" 
+          class="px-3 py-2 bg-gray-800 border border-gray-900 focus:border-green-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
+          autocomplete="off"
+      >
+      </div>
+      <div class="flex flex-col mb-3">
+      <label for="email">Email</label>
+      <input 
+          type="text" id="email" 
+          class="px-3 py-2 bg-gray-800 border border-gray-900 focus:border-green-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
+          autocomplete="off"
+      >
+      </div>
+      <div class="flex flex-col mb-3">
+      <label for="message">Message</label>
+      <textarea 
+          rows="4" id="message" 
+          class="px-3 py-2 bg-gray-800 border border-gray-900 focus:border-green-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
+      ></textarea>
       </div>
   </div>
+  <div class="w-full pt-3">
+      <button type="submit" class="w-full bg-gray-900 border border-green-500 px-4 py-2 transition duration-50 focus:outline-none font-semibold hover:bg-green-500 hover:text-white text-xl cursor-pointer">
+      Send
+      </button>
+  </div>
+  </form>
+</div>
+
 
 <!-- Content end -->
 

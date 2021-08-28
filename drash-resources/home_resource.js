@@ -10,7 +10,7 @@ export default class HomeResource extends Drash.Http.Resource {
 
   GET() {
     try {
-      let fileContentsRaw = Deno.readFileSync("./index.html");
+      let fileContentsRaw = Deno.readFileSync(Deno.cwd() + "/public/index.html");
       let template = decoder.decode(fileContentsRaw);
       this.response.body = template;
     } catch (error) {
