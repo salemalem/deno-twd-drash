@@ -1,4 +1,4 @@
-import { Drash } from "https://deno.land/x/drash@v1.5.1/mod.ts";
+import { Drash } from "../dependencies.js";
 
 const decoder = new TextDecoder();
 

@@ -1,9 +1,9 @@
-import { Drash } from "https://deno.land/x/drash@v1.5.1/mod.ts";
+import { Drash } from "./dependencies.js";
 
-import HomeResource    from "./drash-resources/home_resource.js";
-import ContactResource from "./drash-resources/contact_resource.js";
-import AboutResource   from "./drash-resources/about_resource.js";
-import PricingResource   from "./drash-resources/pricing_resource.js";
+import { HomeResource }    from "./dependencies.js";
+import { ContactResource } from "./dependencies.js";
+import { AboutResource }   from "./dependencies.js";
+import { PricingResource } from "./dependencies.js";
 
 const server = new Drash.Http.Server({
   directory: Deno.cwd(),
