@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="/public/styles.css" rel="stylesheet">
 </head>
-<body>
+<body class="dark:bg-gray-900">
   <!-- Menu -->
   <nav class="bg-white shadow dark:bg-gray-800">
     <div class="container px-6 py-3 mx-auto md:flex">
         <div class="flex items-center justify-between">
             <div>
-                <a class="text-2xl font-bold text-gray-800 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="#">Brand</a>
+                <a class="text-2xl font-bold text-gray-800 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="#">EcoLedjr</a>
             </div>
             
             <!-- Mobile menu button -->
@@ -28,7 +28,7 @@
         <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
         <div class="w-full md:flex md:items-center md:justify-between">
             <div class="flex flex-col px-2 py-3 -mx-4 md:flex-row md:mx-0 md:py-0">
-                <a href="#" class="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Home</a>
+                <a href="#" class="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Tutorials</a>
                 <a href="#" class="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">About</a>
                 <a href="#" class="px-2 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 md:mx-2">Contact</a>
             </div>
@@ -48,117 +48,87 @@
 
 <!-- Content start -->
 
-<section class="text-blueGray-700 ">
-    <div class="container items-center px-5 py-8 mx-auto lg:px-24">
-      <div class="flex flex-wrap mb-12 text-left">
-        <div class="w-full mx-auto lg:w-1/3">
-          <div class="p-6">
-            <img class="object-cover object-center w-full mb-8 lg:h-48 md:h-36" src="https://dummyimage.com/720x400/F3F4F7/8693ac" alt="blog">
-            <h2 class="mb-8 text-xs font-semibold tracking-widest text-black uppercase title-font">a great header right here</h2>
-            <h1 class="mx-auto mb-4 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font"> Short length headline to use as a title. </h1>
-            <a href="#" class="inline-flex items-center mt-auto font-semibold text-blue-600 lg:mb-0 hover:text-black " title="read more"> Read More » </a>
-          </div>
-        </div>
-        <div class="w-full mx-auto lg:w-1/3">
-          <div class="p-6">
-            <img class="object-cover object-center w-full mb-8 lg:h-48 md:h-36" src="https://dummyimage.com/720x400/F3F4F7/8693ac" alt="blog">
-            <h2 class="mb-8 text-xs font-semibold tracking-widest text-black uppercase title-font">a great header right here</h2>
-            <h1 class="mx-auto mb-4 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font"> Short length headline to use as a title. </h1>
-            <a href="#" class="inline-flex items-center mt-auto font-semibold text-blue-600 lg:mb-0 hover:text-black " title="read more"> Read More » </a>
-          </div>
-        </div>
-        <div class="w-full mx-auto lg:w-1/3">
-          <div class="p-6">
-            <img class="object-cover object-center w-full mb-8 lg:h-48 md:h-36" src="https://dummyimage.com/720x400/F3F4F7/8693ac" alt="blog">
-            <h2 class="mb-8 text-xs font-semibold tracking-widest text-black uppercase title-font">a great header right here</h2>
-            <h1 class="mx-auto mb-4 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font"> Short length headline to use as a title. </h1>
-            <a href="#" class="inline-flex items-center mt-auto font-semibold text-blue-600 lg:mb-0 hover:text-black " title="read more"> Read More » </a>
-          </div>
-        </div>
-      </div>
+<section class="container px-6 py-4 mx-auto">
+  <div class="grid gap-6 mb-8 md:grid-cols-1 lg:grid-cols-2">
+    <!-- Card 1 -->
+    <div class="flex items-center p-4 border-1 border-gray-800 rounded-lg shadow-sm dark:bg-gray-800">
+        <img alt="mountain" class="w-45 rounded-md border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
+         <div id="body" class="flex flex-col ml-5">
+            <h4 id="name" class="text-xl font-semibold mb-2 dark:text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+            <p id="job" class="text-gray-800 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="flex mt-5">
+               <img alt="avatar" class="w-6 rounded-full border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
+               <p class="ml-3 dark:text-gray-300">John Doe</p>
+            </div>
+         </div>
     </div>
-  </section>
+    <!-- Card 2 -->
+    <div class="flex items-center p-4 border-1 border-gray-800 rounded-lg shadow-sm dark:bg-gray-800">
+      <img alt="mountain" class="w-45 rounded-md border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
+       <div id="body" class="flex flex-col ml-5">
+          <h4 id="name" class="text-xl font-semibold mb-2 dark:text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+          <p id="job" class="text-gray-800 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div class="flex mt-5">
+             <img alt="avatar" class="w-6 rounded-full border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
+             <p class="ml-3 dark:text-gray-300">John Doe</p>
+          </div>
+       </div>
+  </div>
+    <!-- Card 3 -->
+    <div class="flex items-center p-4 border-1 border-gray-800 rounded-lg shadow-sm dark:bg-gray-800">
+      <img alt="mountain" class="w-45 rounded-md border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
+       <div id="body" class="flex flex-col ml-5">
+          <h4 id="name" class="text-xl font-semibold mb-2 dark:text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+          <p id="job" class="text-gray-800 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div class="flex mt-5">
+             <img alt="avatar" class="w-6 rounded-full border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
+             <p class="ml-3 dark:text-gray-300">John Doe</p>
+          </div>
+       </div>
+  </div>
+    <!-- Card 4 -->
+    <div class="flex items-center p-4 border-1 border-gray-800 rounded-lg shadow-sm dark:bg-gray-800">
+      <img alt="mountain" class="w-45 rounded-md border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
+       <div id="body" class="flex flex-col ml-5">
+          <h4 id="name" class="text-xl font-semibold mb-2 dark:text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+          <p id="job" class="text-gray-800 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div class="flex mt-5">
+             <img alt="avatar" class="w-6 rounded-full border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
+             <p class="ml-3 dark:text-gray-300">John Doe</p>
+          </div>
+       </div>
+  </div>
+  </div>
+</section>
 
 <!-- Subscribe to our email -->
-<section class="text-blueGray-700 ">
-    <div class="container flex flex-col items-start px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-28">
-      <div class="w-full mb-10 lg:w-5/6 lg:max-w-lg md:w-1/2">
-        <img class="object-cover object-center rounded" alt="hero" loading="lazy" src="https://dummyimage.com/720x600/F3F4F7/8693ac">
-      </div>
-      <div class="flex flex-col items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
-        <h1 class="mb-8 text-2xl font-bold tracking-tighter text-black lg:text-left lg:text-5xl title-font"> Medium length display headline.</h1>
-        <p class="mb-8 text-base leading-relaxed text-left text-blueGray-700 ">Deploy your mvp in minutes, not days. WT offers you a a wide selection swapable sections for your landing page. </p>
-        <div class="flex flex-col w-full gap-2 md:justify-start md:flex-row">
-          <input class="flex-grow w-full px-4 py-3 mb-4 text-base text-black transition ease-in-out transform rounded-lg duration-650 lg:w-auto bg-blueGray-200 focus:outline-none focus:border-purple-500 sm:mb-0 focus:bg-white focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2" placeholder="Your Email" type="email">
-          <button class="flex items-center px-6 py-3 mt-auto font-semibold text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-lg hover:bg-blue-700 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2"> Subscribe </button>
-        </div>
-        <p class="w-full mt-2 mb-8 text-sm text-left text-blueGray-600"> I got 99 problems and blocks ain't one. </p>
-      </div>
-    </div>
-  </section>
+  <!-- card wrapper -->
+  <div class="wrapper bg-green-800 rounded-sm shadow-lg w-full">
+      <div class="container px-4 mx-auto">
+        <div class="card px-8 py-4">
+            <div class="card-image mt-10 mb-6">
+                <svg 
+                    class="w-10 h-10 text-orange-500 fill-current text-yellow-100"
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="512" height="512.002" 
+                    viewBox="0 0 512 512.002">
+                    <g transform="translate(0 0.002)">
+                        <path d="M64,257.6,227.9,376a47.72,47.72,0,0,0,56.2,0L448,257.6V96a32,32,0,0,0-32-32H96A32,32,0,0,0,64,96ZM160,160a16,16,0,0,1,16-16H336a16,16,0,0,1,16,16v16a16,16,0,0,1-16,16H176a16,16,0,0,1-16-16Zm0,80a16,16,0,0,1,16-16H336a16,16,0,0,1,16,16v16a16,16,0,0,1-16,16H176a16,16,0,0,1-16-16Z" opacity="0.4"/><path d="M352,160a16,16,0,0,0-16-16H176a16,16,0,0,0-16,16v16a16,16,0,0,0,16,16H336a16,16,0,0,0,16-16Zm-16,64H176a16,16,0,0,0-16,16v16a16,16,0,0,0,16,16H336a16,16,0,0,0,16-16V240A16,16,0,0,0,336,224ZM329.4,41.4C312.6,29.2,279.2-.3,256,0c-23.2-.3-56.6,29.2-73.4,41.4L152,64H360ZM64,129c-23.9,17.7-42.7,31.6-45.6,34A48,48,0,0,0,0,200.7v10.7l64,46.2Zm429.6,34c-2.9-2.3-21.7-16.3-45.6-33.9V257.6l64-46.2V200.7A48,48,0,0,0,493.6,163ZM256,417.1a79.989,79.989,0,0,1-46.888-15.192L0,250.9V464a48,48,0,0,0,48,48H464a48,48,0,0,0,48-48V250.9l-209.1,151A80,80,0,0,1,256,417.1Z"/>
+                    </g>
+                </svg>
+            </div>
 
+            <div class="card-text">
+                <h1 class="text-xl md:text-2xl font-bold leading-tight text-gray-100">Get the latest tutorials right into your inbox!</h1>
+                <p class="text-base md:text-lg text-gray-200 mt-3 ">Join 4k+ happy subscribers!</p>
+            </div>
 
-
-  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-    <div class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
-      <div class="p-8 bg-white border rounded shadow-sm">
-        <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
-          <a href="/" class="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800" aria-label="Category">weekend</a>
-          <span class="text-gray-600">— 1 Feb 2020</span>
-        </p>
-        <a href="/" aria-label="Article" title="Jingle Bells" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Jingle Bells</a>
-        <p class="mb-5 text-gray-700">
-          Some pilots get picked and become television programs. Some don't, become nothing.
-        </p>
-        <div class="flex items-center">
-          <a href="/" aria-label="Author" title="Author" class="mr-3">
-            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
-          </a>
-          <div>
-            <a href="/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Vasile Melinte</a>
-            <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
-          </div>
+            <div class="card-mail flex items-center my-10">
+                <input type="email" class="border-l border-t border-b border-gray-200 rounded-l-md w-full text-base md:text-lg px-3 py-2" placeholder="Enter Your Email">
+                <button class="bg-orange-500 hover:bg-orange-600 hover:border-orange-600 text-white font-bold capitalize px-3 py-2 text-base md:text-lg rounded-r-md border-t border-r border-b border-orange-500">subscribe</button>
+            </div>
         </div>
       </div>
-      <div class="p-8 bg-white border rounded shadow-sm">
-        <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
-          <a href="/" class="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800" aria-label="Category">holidays</a>
-          <span class="text-gray-600">— 15 Nov 2020</span>
-        </p>
-        <a href="/" aria-label="Article" title="Happy new Year" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Happy new Year</a>
-        <p class="mb-5 text-gray-700">
-          Pommy ipsum smeg head whizz morris dancers come hither, bugger codswallop gob. Taking the mick middle class bog.
-        </p>
-        <div class="flex items-center">
-          <a href="/" aria-label="Author" title="Author" class="mr-3">
-            <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
-          </a>
-          <div>
-            <a href="/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">John Doe</a>
-            <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
-          </div>
-        </div>
-      </div>
-      <div class="p-8 bg-white border rounded shadow-sm">
-        <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
-          <a href="/" class="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800" aria-label="Category">programming</a>
-          <span class="text-gray-600">— 28 Dec 2020</span>
-        </p>
-        <a href="/" aria-label="Article" title="Why i love C++" class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400">Why i love C++</a>
-        <p class="mb-5 text-gray-700">
-          Sportacus andrew weatherall goose Refined gentlemen super mario des lynam alpha trion zap rowsdower.
-        </p>
-        <div class="flex items-center">
-          <a href="/" aria-label="Author" title="Author" class="mr-3">
-            <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
-          </a>
-          <div>
-            <a href="/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">Andrew Larkin</a>
-            <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
 <!-- Content end -->
@@ -170,10 +140,10 @@
             <div class="w-full -mx-6 lg:w-2/5">
                 <div class="px-6">
                     <div>
-                        <a href="#" class="text-xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">Brand</a>
+                        <a href="#" class="text-xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">EcoLedjr</a>
                     </div>
                     
-                    <p class="max-w-md mt-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, nisi! Id.</p>
+                    <p class="max-w-md mt-2 text-gray-500 dark:text-gray-400">Fast, Efficient Ledger on Dartlang.</p>
                     
                     <div class="flex mt-4 -mx-2">
                         <a href="#" class="mx-2 text-gray-700 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400" aria-label="Linkden">
@@ -202,27 +172,27 @@
                     <div>
                         <h3 class="text-gray-700 uppercase dark:text-white">About</h3>
                         <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Company</a>
-                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">community</a>
+                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Community</a>
                         <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Careers</a>
                     </div>
 
-                    <div>
+                    <!-- <div>
                         <h3 class="text-gray-700 uppercase dark:text-white">Blog</h3>
                         <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Tec</a>
                         <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Music</a>
                         <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Videos</a>
-                    </div>
+                    </div> -->
 
                     <div>
                         <h3 class="text-gray-700 uppercase dark:text-white">Products</h3>
-                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Mega cloud</a>
-                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Aperion UI</a>
-                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Meraki UI</a>
+                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Coming soon...</a>
+                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Coming soon...</a>
+                        <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Coming soon...</a>
                     </div>
 
                     <div>
                         <h3 class="text-gray-700 uppercase dark:text-white">Contact</h3>
-                        <span class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">+1 526 654 8965</span>
+                        <span class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">+1 234 567 8910</span>
                         <span class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">example@email.com</span>
                     </div>
                 </div>
@@ -232,7 +202,7 @@
         <hr class="h-px my-6 bg-gray-300 border-none dark:bg-gray-700">
 
         <div>
-            <p class="text-center text-gray-800 dark:text-white">© Brand 2020 - All rights reserved</p>
+            <p class="text-center text-gray-800 dark:text-white">© EcoLedjr 2021 - All rights reserved</p>
         </div>
     </div>
 </footer>
