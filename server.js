@@ -2,6 +2,7 @@ import { Drash } from "https://deno.land/x/drash@v1.5.1/mod.ts";
 
 import HomeResource from "./home_resource.js";
 import ContactResource from "./contact_resource.js";
+import AboutResource from "./about_resource.js";
 
 const server = new Drash.Http.Server({
   directory: Deno.cwd(),
@@ -9,8 +10,9 @@ const server = new Drash.Http.Server({
   resources: [
     HomeResource,
     ContactResource,
+    AboutResource,
   ],
-  static_paths: ["/public"]
+  static_paths: ["/public"],
 });
 
 console.log("Server is running on port 1447");
