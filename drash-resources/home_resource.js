@@ -1,24 +1,30 @@
-import { Drash } from "../dependencies.js";
+import { Drash } from "https://deno.land/x/drash@v1.4.2/mod.ts";
 
-const decoder = new TextDecoder();
+export class HomeResource extends Drash.Http.Resource {
+  static paths = ["/"];
 
-export default class HomeResource extends Drash.Http.Resource {
+    async GET() {
+    this.response.body = await this.response.render(
+      Deno.cwd() + "/public/views/index",
+      {
+        message: "Hella using Eta.",
+        template_engines: [
+          {
+            name: "dejs",
+            url: "https://github.com/syumai/dejs",
+          },
+          {
+            name: "Dinja",
+            url: "https://github.com/denjucks/dinja",
+          },
+          {
+            name: "Jae",
+            url: "https://github.com/drashland/deno-drash-middleware",
+          },
+        ],
+      },
+    );
 
-  static paths = [
-    "/"
-  ];
-
-  GET() {
-    try {
-      let fileContentsRaw = Deno.readFileSync(Deno.cwd() + "/public/index.html");
-      let template = decoder.decode(fileContentsRaw);
-      this.response.body = template;
-    } catch (error) {
-      throw new Drash.Exceptions.HttpException(
-        400,
-        `Error reading HTML template.`
-      );
-    }
     return this.response;
   }
 }

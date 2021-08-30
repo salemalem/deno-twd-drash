@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="w-full h-full">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+    <title>Tengine</title>
+  </head>
+  <body style="background: #f4f4f4">
+    <div style="max-width: 640px; margin: 50px auto;">
+      <h1 class="mb-5 text-5xl"><%= it.message %></h1>
+      <p class="mb-5">Eta is a template engine. Some other template engines are:</p>
+      <ul class="ml-5 list-disc">
+        <% for (const index in it.template_engines) { %>
+          <li>
+            <span class="text-bold"><%= it.template_engines[index].name %>: </span>
+            <a href="<%= it.template_engines[index].url %>" target="_BLANK"><%= it.template_engines[index].url %></a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+</html>
