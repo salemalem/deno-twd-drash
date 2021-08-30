@@ -10,7 +10,7 @@ import { Tengine } from "https://deno.land/x/drash_middleware@v0.7.4/tengine/mod
 import {
   configure,
   renderFile,
-} from "https://deno.land/x/eta@v1.6.0/mod.ts";
+} from "https://deno.land/x/eta@v1.12.3/mod.ts";
 
 // Set Eta's configuration
 configure({
