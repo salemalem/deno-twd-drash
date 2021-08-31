@@ -31,8 +31,8 @@ denon start
 ## Directory Structure
 ```
 .
-├── drash-resources         # Resources that Drash uses, controller analog in express.js
-├── public                  # Static files: CSS and ETA template lang.
+├── drash-resources/        # Resources that Drash uses, controller analog in express.js
+├── public/                 # Static files: CSS and ETA template lang.
 ├── server.js               # Deno server file, also known as app.js
 ├── dependencies.js         # known as deps.js in Deno. All dependencies are centralized here
 ├── scripts.json            # Used for Denon watcher configuration
