@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="w-full h-full">
+<html class="w-full h-full dark">
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, user-scalable=no"/>
@@ -7,6 +7,7 @@
     <title>Tengine</title>
   </head>
   <body style="background: #f4f4f4">
+  
     <div style="max-width: 640px; margin: 50px auto;">
       <h1 class="mb-5 text-5xl"><%= it.message %></h1>
       <p class="mb-5">Eta is a template engine. Some other template engines are:</p>

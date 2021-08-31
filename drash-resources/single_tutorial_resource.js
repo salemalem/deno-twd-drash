@@ -5,11 +5,13 @@ const decoder = new TextDecoder();
 export class SingleTutorialResource extends Drash.Http.Resource {
 
   static paths = [
-    "/tutorial"
+    "/tutorial/:slug"
   ];
 
   GET() {
     try {
+      const tutorialSlug = this.request.getPathParam("slug");
+      console.log(tutorialSlug);
       let fileContentsRaw = Deno.readFileSync(Deno.cwd() + "/public/single_tutorial.html");
       let template = decoder.decode(fileContentsRaw);
       this.response.body = template;
