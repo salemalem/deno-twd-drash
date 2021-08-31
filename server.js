@@ -1,6 +1,7 @@
 import { Drash } from "./dependencies.js";
 
 import { HomeResource }    from "./drash-resources/home_resource.js";
+import { SingleTutorialResource }    from "./drash-resources/single_tutorial_resource.js";
 import { ContactResource } from "./dependencies.js";
 import { AboutResource }   from "./dependencies.js";
 import { PricingResource } from "./dependencies.js";
@@ -35,6 +36,7 @@ const server = new Drash.Http.Server({
     ContactResource,
     AboutResource,
     PricingResource,
+    SingleTutorialResource,
   ],
   middleware: {
     after_resource: [
