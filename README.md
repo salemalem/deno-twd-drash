@@ -22,3 +22,8 @@ Builtin 89ms
 ```
 
 -w flag is used to watch file changes instead of reexecuting the command each time.
+
+## How to run
+```
+denon start
+```
