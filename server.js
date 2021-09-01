@@ -5,6 +5,7 @@ import { SingleTutorialResource }    from "./drash-resources/single_tutorial_res
 import { ContactResource } from "./dependencies.js";
 import { AboutResource }   from "./dependencies.js";
 import { PricingResource } from "./dependencies.js";
+import { DatabaseTestResource }    from "./drash-resources/database_test_resource.js";
 
 
 import { Tengine } from "https://deno.land/x/drash_middleware@v0.7.4/tengine/mod.ts";
@@ -29,6 +30,10 @@ const tengine = Tengine({
 });
 
 const server = new Drash.Http.Server({
+  logger: new Drash.CoreLoggers.ConsoleLogger({
+    enabled: true,
+    level: "debug",
+  }),
   directory: Deno.cwd(),
   response_output: "text/html",
   resources: [
@@ -37,6 +42,7 @@ const server = new Drash.Http.Server({
     AboutResource,
     PricingResource,
     SingleTutorialResource,
+    DatabaseTestResource,
   ],
   middleware: {
     after_resource: [
