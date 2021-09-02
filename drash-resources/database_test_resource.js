@@ -1,11 +1,12 @@
 import { Drash } from "../dependencies.js";
-import { CasualDB } from "https://deno.land/x/casualdb@v0.1.4/mod.ts";
+import { Database } from 'https://deno.land/x/aloedb@0.9.0/mod.ts'
 
-const db = new CasualDB();
-
-await db.connect(Deno.cwd() + "/database/test-db.json", {
-  bailIfNotPresent: true,
+// database initialization
+const db = new Database({
+  path: Deno.cwd() + "/database/test-db.json",
+  pretty: true,
 });
+
 export class DatabaseTestResource extends Drash.Http.Resource {
 
   static paths = [
@@ -14,8 +15,11 @@ export class DatabaseTestResource extends Drash.Http.Resource {
 
   async GET() {
     try {
-      let posts = await db.get('posts');
-      this.response.body = JSON.stringify(posts["data"]);
+      await db.insertMany({key: 1, value: "one"});
+      // let result = await db.findMany({ key: 1 });
+      // console.log(result);
+      this.response.body = "hi";
+      throw Error;
     } catch (error) {
       throw new Drash.Exceptions.HttpException(
         400,
