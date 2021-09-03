@@ -15,9 +15,9 @@ export class DatabaseTestResource extends Drash.Http.Resource {
 
   async GET() {
     try {
-      await db.insertMany({key: 1, value: "one"});
-      // let result = await db.findMany({ key: 1 });
-      // console.log(result);
+      // await db.insertOne({title: "how to use linux", body: "go to linux.org"});
+      let result = await db.findMany({ title: "how to use linux" });
+      console.log(result);
       this.response.body = "hi";
       throw Error;
     } catch (error) {
