@@ -32,7 +32,7 @@ export class DatabaseTestResource extends Drash.Http.Resource {
       // let fileContentsRaw = Deno.readFileSync(Deno.cwd() + "/public/index.html");
       // let template = decoder.decode(fileContentsRaw);
       // this.response.body = template;
-      this.response.body = "hi";
+      this.response.body = "hi!";
     } catch (error) {
       throw new Drash.Exceptions.HttpException(
         400,
