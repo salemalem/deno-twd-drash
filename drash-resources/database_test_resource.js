@@ -17,18 +17,10 @@ export class DatabaseTestResource extends Drash.Http.Resource {
 
   async GET() {
     try {
-      for(let outer_i = 0; outer_i < 20; outer_i++) {
-        await aloeTestDB.drop();
-        let start = performance.now();
+      await aloeTestDB.drop();
 
-        for(let inner_i = 0; inner_i < 10000; inner_i++) {
-          await aloeTestDB.insertOne({title: "how to use linux", body: "go to linux.org"});
-        }
-        
-        let end = performance.now();
-        let time = end - start;
-        console.log('Aloe DB execution time: ' + time);
-      }
+      await aloeTestDB.insertOne({title: "how to use linux", body: "go to linux.org"});
+
       // let fileContentsRaw = Deno.readFileSync(Deno.cwd() + "/public/index.html");
       // let template = decoder.decode(fileContentsRaw);
       // this.response.body = template;
