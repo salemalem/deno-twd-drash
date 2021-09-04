@@ -54,7 +54,7 @@ const server = new Drash.Http.Server({
 
 server.run({
   hostname: "localhost",
-  port: 1447
+  port: 8080
 });
 
 console.log(`Server running at ${server.hostname}:${server.port}`);
