@@ -21,7 +21,7 @@ export class DatabaseTestResource extends Drash.Http.Resource {
         await aloeTestDB.drop();
         let start = performance.now();
 
-        for(let inner_i = 0; inner_i < 1000; inner_i++) {
+        for(let inner_i = 0; inner_i < 10000; inner_i++) {
           await aloeTestDB.insertOne({title: "how to use linux", body: "go to linux.org"});
         }
         
