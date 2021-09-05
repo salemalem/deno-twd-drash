@@ -27,6 +27,10 @@ Builtin 89ms
 ```
 denon start
 ```
+or
+```
+deno run --unstable -A server.js
+```
 
 ## Directory Structure
 ```
