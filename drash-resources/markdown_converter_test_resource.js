@@ -9,9 +9,9 @@ export class MarkdownConverterTestResource extends Drash.Http.Resource {
     "/markdown_converter_test"
   ];
 
-  async GET() {
+  GET() {
     try {
-      let stringForMarkdown = "";
+      let stringForMarkdown = "# hello world!";
       let result = rimu.render(stringForMarkdown);
       this.response.body = result;
       // this.response.body = "Hello, world!";
