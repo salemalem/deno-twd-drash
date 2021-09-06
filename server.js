@@ -16,28 +16,6 @@ import {
   renderFile,
 } from "https://deno.land/x/eta@v1.12.3/mod.ts";
 
- // Import the functions you need from the SDKs you need
- import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
- import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-analytics.js";
- // TODO: Add SDKs for Firebase products that you want to use
- // https://firebase.google.com/docs/web/setup#available-libraries
-
- // Your web app's Firebase configuration
- // For Firebase JS SDK v7.20.0 and later, measurementId is optional
- const firebaseConfig = {
-   apiKey: "AIzaSyBf6T1FpOTpBU7NvBbr6Q_3__ILC3qBqzk",
-   authDomain: "deno-twd-drash.firebaseapp.com",
-   projectId: "deno-twd-drash",
-   storageBucket: "deno-twd-drash.appspot.com",
-   messagingSenderId: "498715166023",
-   appId: "1:498715166023:web:c986b172651a991995b862",
-   measurementId: "G-PG556D5C8X"
- };
-
- // Initialize Firebase
- const app = initializeApp(firebaseConfig);
- const analytics = getAnalytics(app);
-
 // Set Eta's configuration
 configure({
   // This tells Eta to look for templates in the ./public/views/ directory
