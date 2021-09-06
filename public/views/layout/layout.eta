@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="public/css/tailwind.css">
+  <!-- Tailwind CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.9/tailwind-dark.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.9/components.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.9/base.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.9/utilities.min.css" rel="stylesheet">
   <title><%= it.page_title %></title>
 </head>
 <body class="dark:bg-gray-900">

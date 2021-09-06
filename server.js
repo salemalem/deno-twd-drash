@@ -1,9 +1,11 @@
 import { Drash } from "./dependencies.js";
 
 // Drash resources
-import { HomeResource }    from "./dependencies.js";
+import { 
+  HomeResource,
+  ContactResource,
+}    from "./dependencies.js";
 import { SingleTutorialResource }    from "./drash-resources/single_tutorial_resource.js";
-import { ContactResource } from "./dependencies.js";
 import { AboutResource }   from "./dependencies.js";
 import { PricingResource } from "./dependencies.js";
 import { DatabaseTestResource }    from "./drash-resources/database_test_resource.js";
