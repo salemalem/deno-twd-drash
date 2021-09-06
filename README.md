@@ -6,11 +6,6 @@ blog powered by Tailwind CSS + Drash as a Deno framework
 ## Required tools to install before customisation
 If you want to customize the server for your needs, you need to install required tools, which is explained in [this wiki page](https://github.com/salemalem/deno-twd-drash/wiki/Installing-required-tools-before-running-the-server)
 
-## Install <a href="https://github.com/kt3k/twd">twd</a>
-```cmd
-deno install --allow-read=. --allow-write=. --allow-net=deno.land,esm.sh,cdn.esm.sh -fq https://deno.land/x/twd@v0.4.8/cli.ts
-```
-
 ## index.html
 write tailwind components with classes as it's written in this repo.
 
