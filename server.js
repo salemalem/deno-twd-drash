@@ -1,6 +1,7 @@
 import { Drash } from "./dependencies.js";
 
-import { HomeResource }    from "./drash-resources/home_resource.js";
+// Drash resources
+import { HomeResource }    from "./dependencies.js";
 import { SingleTutorialResource }    from "./drash-resources/single_tutorial_resource.js";
 import { ContactResource } from "./dependencies.js";
 import { AboutResource }   from "./dependencies.js";
@@ -10,11 +11,11 @@ import { MarkdownConverterTestResource }    from "./drash-resources/markdown_con
 import { InsertToDbFromFormResource }    from "./drash-resources/insert_to_db_from_form_resource.js";
 
 
-import { Tengine } from "https://deno.land/x/drash_middleware@v0.7.4/tengine/mod.ts";
+import { Tengine } from "./dependencies.js";
 import {
   configure,
   renderFile,
-} from "https://deno.land/x/eta@v1.12.3/mod.ts";
+} from "./dependencies.js";
 
 // Set Eta's configuration
 configure({
