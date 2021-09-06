@@ -1,5 +1,5 @@
-import { Drash } from "https://deno.land/x/drash@v1.4.2/mod.ts";
-
+// Index page
+import { Drash } from "../dependencies.js";
 export class HomeResource extends Drash.Http.Resource {
   static paths = ["/"];
 
@@ -7,21 +7,26 @@ export class HomeResource extends Drash.Http.Resource {
     this.response.body = await this.response.render(
       Deno.cwd() + "/public/views/index",
       {
-        message: "Hella using Eta.",
-        template_engines: [
+        tutorials: [
           {
-            name: "dejs",
-            url: "https://github.com/syumai/dejs",
+            title: "How to install Linux",
+            description: "A tutorial on how to install Linux on your computer.",
+            slug: "how-to-install-linux",
+            date: new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: '2-digit'}),
           },
           {
-            name: "Dinja",
-            url: "https://github.com/denjucks/dinja",
+            title: "How to install Windows",
+            description: "A tutorial on how to install Windows on your computer.",
+            slug: "how-to-install-windows",
+            date: new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: '2-digit'}),
           },
           {
-            name: "Jae",
-            url: "https://github.com/drashland/deno-drash-middleware",
+            title: "How to install ChromiumOS",
+            description: "A tutorial on how to install ChromiumOS on your computer.",
+            slug: "how-to-install-chromiumos",
+            date: new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: '2-digit'}),
           },
-        ],
+        ]
       },
     );
 
