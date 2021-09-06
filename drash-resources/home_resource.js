@@ -7,6 +7,7 @@ export class HomeResource extends Drash.Http.Resource {
     this.response.body = await this.response.render(
       Deno.cwd() + "/public/views/index",
       {
+        page_title: "Home",
         tutorials: [
           {
             title: "How to install Linux",

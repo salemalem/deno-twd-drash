@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html class="dark">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="public/css/tailwind.css">
+  <title><%= it.page_title %></title>
+</head>
+<body class="dark:bg-gray-900">
+<%~ includeFile("./partials/header_nav.eta") %>
+
+<%~ it.body %>
+
+<%~ includeFile("./partials/footer.eta") %>
+</body>
+</html>
