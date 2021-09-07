@@ -1,4 +1,4 @@
-<!-- Base layout + custom css import -->
+<!-- Base layout + custom css import and highlight js -->
 <!DOCTYPE html>
 <html class="dark">
 <head>
