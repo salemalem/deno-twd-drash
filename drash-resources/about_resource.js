@@ -9,13 +9,19 @@ export class AboutResource extends Drash.Http.Resource {
   ];
 
   async GET() {
-    this.response.body = await this.response.render(
-      Deno.cwd() + "/public/views/pages/about",
-      {
-        page_title: "About",
-      },
-    );
-
+    try {
+      this.response.body = await this.response.render(
+        Deno.cwd() + "/public/views/pages/about",
+        {
+          page_title: "About",
+        },
+      );
+    } catch (error) {
+      throw new Drash.Exceptions.HttpException(
+        400,
+        `Error reading ETA template.`
+      );
+    }
     return this.response;
   }
 }

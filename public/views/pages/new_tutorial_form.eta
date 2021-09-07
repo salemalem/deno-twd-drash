@@ -1,0 +1,47 @@
+<% layout('../layout/layout') %>
+<!-- Content Start -->
+
+<!-- wrapper -->
+<div class="relative flex flex-col items-center justify-center p-5 text-gray-100 lg:px-20 md:flex-row">  
+  <!-- Add new tutorial -->
+  <form action="/tutorials/new" class="w-screen p-6 bg-gray-900 border border-green-500 md:w-5/6" method="post">
+  <h2 class="pb-3 text-2xl font-semibold">
+      Add new tutorial
+  </h2>
+  <div>
+      <div class="flex flex-col mb-3">
+      <label for="title">Title</label>
+      <input 
+          type="text" id="title" 
+          class="px-3 py-2 bg-gray-800 border border-gray-900 focus:border-green-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
+          autocomplete="off"
+          name="title"
+      >
+      </div>
+      <div class="flex flex-col mb-3">
+      <label for="description">Description</label>
+      <input 
+          type="text" id="description" 
+          class="px-3 py-2 bg-gray-800 border border-gray-900 focus:border-green-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
+          autocomplete="off"
+          name="description"
+      >
+      </div>
+      <div class="flex flex-col mb-3">
+      <label for="body">Body</label>
+      <textarea 
+          rows="4" id="body" 
+          class="px-3 py-2 bg-gray-800 border border-gray-900 focus:border-green-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
+          name="body"
+      ></textarea>
+      </div>
+  </div>
+  <div class="w-full pt-3">
+      <button type="submit" class="w-full px-4 py-2 text-xl font-semibold transition bg-gray-900 border border-green-500 cursor-pointer duration-50 focus:outline-none hover:bg-green-500 hover:text-white">
+      Send
+      </button>
+  </div>
+  </form>
+</div>
+
+<!-- Content end -->

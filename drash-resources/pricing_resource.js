@@ -9,13 +9,19 @@ export class PricingResource extends Drash.Http.Resource {
   ];
 
   async GET() {
-    this.response.body = await this.response.render(
-      Deno.cwd() + "/public/views/pages/pricing",
-      {
-        page_title: "Pricing",
-      },
-    );
-
+    try {
+      this.response.body = await this.response.render(
+        Deno.cwd() + "/public/views/pages/pricing",
+        {
+          page_title: "Pricing",
+        },
+      );
+    } catch (error) {
+      throw new Drash.Exceptions.HttpException(
+        400,
+        `Error reading ETA template.`
+      );
+    }
     return this.response;
   }
 }

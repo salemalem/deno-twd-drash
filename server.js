@@ -6,6 +6,7 @@ import {
   ContactResource,
   AboutResource,
   PricingResource,
+  NewTutorialFormResource,
 }    from "./dependencies.js";
 import { SingleTutorialResource }    from "./drash-resources/single_tutorial_resource.js";
 import { DatabaseTestResource }    from "./drash-resources/database_test_resource.js";
@@ -46,6 +47,7 @@ const server = new Drash.Http.Server({
     ContactResource,
     AboutResource,
     PricingResource,
+    NewTutorialFormResource,
     SingleTutorialResource,
     DatabaseTestResource,
     MarkdownConverterTestResource,
