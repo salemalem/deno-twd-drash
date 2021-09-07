@@ -5,6 +5,7 @@ const decoder = new TextDecoder();
 export class SingleTutorialResource extends Drash.Http.Resource {
 
   static paths = [
+    "/tutorials/:slug",
     "/tutorial/:slug"
   ];
 

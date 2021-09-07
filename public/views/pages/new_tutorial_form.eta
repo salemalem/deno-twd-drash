@@ -28,6 +28,15 @@
       >
       </div>
       <div class="flex flex-col mb-3">
+      <label for="slug">Slug</label>
+      <input 
+          type="text" id="slug" 
+          class="px-3 py-2 bg-gray-800 border border-gray-900 focus:border-green-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
+          autocomplete="off"
+          name="slug"
+      >
+      </div>
+      <div class="flex flex-col mb-3">
       <label for="body">Body</label>
       <textarea 
           rows="4" id="body" 

@@ -9,7 +9,8 @@ function decodeQueryParam(p) {
 export class NewTutorialFormResource extends Drash.Http.Resource {
 
   static paths = [
-    "/tutorials/new"
+    "/tutorials/new",
+    "/tutorial/new"
   ];
 
   async GET() {
@@ -31,20 +32,20 @@ export class NewTutorialFormResource extends Drash.Http.Resource {
   async POST() {
     try {
       const tutorial = {
-        title: decodeQueryParam(this.request.getBodyParam("title")),
+        title:       decodeQueryParam(this.request.getBodyParam("title")),
         description: decodeQueryParam(this.request.getBodyParam("description")),
-        body: decodeQueryParam(this.request.getBodyParam("body")),
-        published: new Date(),
+        slug:        decodeQueryParam(this.request.getBodyParam("slug")),
+        body:        decodeQueryParam(this.request.getBodyParam("body")),
+        published:   new Date(),
       };
       console.log(tutorial);
       console.log(tutorial.published.toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: '2-digit'}));
-      this.response.body = "post";
+      return this.response.redirect(301, `/tutorials/${tutorial.slug}`);
     } catch (error) {
       throw new Drash.Exceptions.HttpException(
         400,
         `Error while post request.`
       );
     }
-    return this.response;
   }
 }
