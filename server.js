@@ -8,6 +8,7 @@ import {
   PricingResource,
   NewTutorialFormResource,
   SingleTutorialResource,
+  NotFoundResource,
 }    from "./dependencies.js";
 
 
@@ -46,6 +47,7 @@ const server = new Drash.Http.Server({
     PricingResource,
     NewTutorialFormResource,
     SingleTutorialResource,
+    NotFoundResource,
   ],
   middleware: {
     after_resource: [
