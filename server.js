@@ -7,11 +7,8 @@ import {
   AboutResource,
   PricingResource,
   NewTutorialFormResource,
+  SingleTutorialResource,
 }    from "./dependencies.js";
-import { SingleTutorialResource }    from "./drash-resources/single_tutorial_resource.js";
-import { DatabaseTestResource }    from "./drash-resources/database_test_resource.js";
-import { MarkdownConverterTestResource }    from "./drash-resources/markdown_converter_test_resource.js";
-import { InsertToDbFromFormResource }    from "./drash-resources/insert_to_db_from_form_resource.js";
 
 
 import { Tengine } from "./dependencies.js";
@@ -48,11 +45,7 @@ const server = new Drash.Http.Server({
     AboutResource,
     PricingResource,
     NewTutorialFormResource,
-    //
     SingleTutorialResource,
-    DatabaseTestResource,
-    MarkdownConverterTestResource,
-    InsertToDbFromFormResource,
   ],
   middleware: {
     after_resource: [

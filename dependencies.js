@@ -6,6 +6,7 @@ export { ContactResource }         from "./drash-resources/contact_resource.js";
 export { AboutResource }           from "./drash-resources/about_resource.js";
 export { PricingResource }         from "./drash-resources/pricing_resource.js";
 export { NewTutorialFormResource } from "./drash-resources/new_tutorial_form_resource.js";
+export { SingleTutorialResource }    from "./drash-resources/single_tutorial_resource.js";
 
 export { Tengine } from "https://deno.land/x/drash_middleware@v0.7.4/tengine/mod.ts";
 export {
