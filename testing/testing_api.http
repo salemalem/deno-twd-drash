@@ -1,1 +1,1 @@
-POST http://localhost:8080/utilities/check_tutorial_slug?slug=hey
+GET http://localhost:8080/utilities/check_tutorial_slug?slug=hey
