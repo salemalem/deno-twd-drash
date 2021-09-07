@@ -1,5 +1,7 @@
 // About us page
 import { Drash } from "../dependencies.js";
+import { tutorialsDB } from "../database/database.js";
+
 
 // parsing %23%20hello%20world to ! hello world
 function decodeQueryParam(p) {
@@ -10,11 +12,12 @@ export class NewTutorialFormResource extends Drash.Http.Resource {
 
   static paths = [
     "/tutorials/new",
-    "/tutorial/new"
+    "/tutorial/new",
   ];
 
   async GET() {
     try {
+      console.log(await tutorialsDB.findMany({}));
       this.response.body = await this.response.render(
         Deno.cwd() + "/public/views/pages/new_tutorial_form",
         {
