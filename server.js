@@ -4,10 +4,10 @@ import { Drash } from "./dependencies.js";
 import { 
   HomeResource,
   ContactResource,
+  AboutResource,
+  PricingResource,
 }    from "./dependencies.js";
 import { SingleTutorialResource }    from "./drash-resources/single_tutorial_resource.js";
-import { AboutResource }   from "./dependencies.js";
-import { PricingResource } from "./dependencies.js";
 import { DatabaseTestResource }    from "./drash-resources/database_test_resource.js";
 import { MarkdownConverterTestResource }    from "./drash-resources/markdown_converter_test_resource.js";
 import { InsertToDbFromFormResource }    from "./drash-resources/insert_to_db_from_form_resource.js";

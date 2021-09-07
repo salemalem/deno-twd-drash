@@ -1,24 +1,21 @@
+// About us page
 import { Drash } from "../dependencies.js";
 
-const decoder = new TextDecoder();
 
-export default class ContactResource extends Drash.Http.Resource {
+export class AboutResource extends Drash.Http.Resource {
 
   static paths = [
     "/about"
   ];
 
-  GET() {
-    try {
-      let fileContentsRaw = Deno.readFileSync(Deno.cwd() + "/public/about.html");
-      let template = decoder.decode(fileContentsRaw);
-      this.response.body = template;
-    } catch (error) {
-      throw new Drash.Exceptions.HttpException(
-        400,
-        `Error reading HTML template.`
-      );
-    }
+  async GET() {
+    this.response.body = await this.response.render(
+      Deno.cwd() + "/public/views/pages/about",
+      {
+        page_title: "About",
+      },
+    );
+
     return this.response;
   }
 }
