@@ -5,7 +5,9 @@ import { Drash } from "../dependencies.js";
 export class AboutResource extends Drash.Http.Resource {
 
   static paths = [
-    "/about"
+    "/about",
+    "/about_us",
+    "/team"
   ];
 
   async GET() {

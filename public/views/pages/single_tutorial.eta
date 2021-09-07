@@ -1,0 +1,7 @@
+<% layout('../layout/single_tutorial_layout') %>
+
+<!-- Content start -->
+
+<%~ it.tutorial_body %>
+
+<!-- Content end -->

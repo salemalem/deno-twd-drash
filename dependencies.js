@@ -12,3 +12,7 @@ export {
   configure,
   renderFile,
 } from "https://deno.land/x/eta@v1.12.3/mod.ts";
+
+export * as rimu from "https://deno.land/x/rimu@11.1.14/mod.ts";
+
+// Database dependency is located at ./database/database.js

@@ -17,7 +17,6 @@ export class NewTutorialFormResource extends Drash.Http.Resource {
 
   async GET() {
     try {
-      console.log(await tutorialsDB.findMany({}));
       this.response.body = await this.response.render(
         Deno.cwd() + "/public/views/pages/new_tutorial_form",
         {
@@ -35,14 +34,21 @@ export class NewTutorialFormResource extends Drash.Http.Resource {
   async POST() {
     try {
       const tutorial = {
-        title:       decodeQueryParam(this.request.getBodyParam("title")),
-        description: decodeQueryParam(this.request.getBodyParam("description")),
-        slug:        decodeQueryParam(this.request.getBodyParam("slug")),
-        body:        decodeQueryParam(this.request.getBodyParam("body")),
-        published:   new Date(),
+        title:               decodeQueryParam(this.request.getBodyParam("title")),
+        description:         decodeQueryParam(this.request.getBodyParam("description")),
+        slug:                decodeQueryParam(this.request.getBodyParam("slug")),
+        body:                decodeQueryParam(this.request.getBodyParam("body")),
+        published_date:      new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: '2-digit'}),
+        published_unix_time: Date.now(),
       };
-      console.log(tutorial);
-      console.log(tutorial.published.toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: '2-digit'}));
+      await tutorialsDB.insertOne({
+        title:       tutorial.title,
+        description: tutorial.description,
+        slug:        tutorial.slug,
+        body:        tutorial.body,
+        published_date:   tutorial.published,
+        published_unix_time: tutorial.published_unix_time,
+      });
       return this.response.redirect(301, `/tutorials/${tutorial.slug}`);
     } catch (error) {
       throw new Drash.Exceptions.HttpException(

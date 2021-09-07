@@ -1,6 +1,5 @@
 import { Drash } from "../dependencies.js";
 
-const decoder = new TextDecoder();
 
 export class PricingResource extends Drash.Http.Resource {
 

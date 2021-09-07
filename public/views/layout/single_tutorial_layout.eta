@@ -1,4 +1,4 @@
-<% /* Base layout where css file imports can't be customized */ %>
+<!-- Base layout + custom css import -->
 <!DOCTYPE html>
 <html class="dark">
 <head>
@@ -9,6 +9,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.9/components.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.9/base.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.9/utilities.min.css" rel="stylesheet">
+  <!-- Custom css -->
+  <link href="<%= it.first_custom_css_import %>" rel="stylesheet">
   <title><%= it.page_title %></title>
 </head>
 <body class="dark:bg-gray-900">

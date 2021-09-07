@@ -48,6 +48,7 @@ const server = new Drash.Http.Server({
     AboutResource,
     PricingResource,
     NewTutorialFormResource,
+    //
     SingleTutorialResource,
     DatabaseTestResource,
     MarkdownConverterTestResource,
