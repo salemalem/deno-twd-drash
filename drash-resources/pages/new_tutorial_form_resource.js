@@ -1,12 +1,8 @@
 // About us page
-import { Drash } from "../dependencies.js";
-import { tutorialsDB } from "../database/database.js";
+import { Drash } from "../../dependencies.js";
+import { tutorialsDB } from "../../database/database.js";
+import { decodeQueryParam } from "../../utilities/decode_query_param.js";
 
-
-// parsing %23%20hello%20world to ! hello world
-function decodeQueryParam(p) {
-  return decodeURIComponent(p.replace(/\+/g, ' '));
-}
 
 export class NewTutorialFormResource extends Drash.Http.Resource {
 
@@ -38,7 +34,6 @@ export class NewTutorialFormResource extends Drash.Http.Resource {
         description:         decodeQueryParam(this.request.getBodyParam("description")),
         slug:                decodeQueryParam(this.request.getBodyParam("slug")),
         body:                decodeQueryParam(this.request.getBodyParam("body")),
-        // published_date:      new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: '2-digit'}),
         published_unix_time: Date.now(),
       };
       await tutorialsDB.insertOne({
@@ -46,7 +41,6 @@ export class NewTutorialFormResource extends Drash.Http.Resource {
         description: tutorial.description,
         slug:        tutorial.slug,
         body:        tutorial.body,
-        // published_date:   tutorial.published_date,
         published_unix_time: tutorial.published_unix_time,
       });
       return this.response.redirect(301, `/tutorials/${tutorial.slug}`);

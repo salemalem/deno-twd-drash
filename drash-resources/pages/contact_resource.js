@@ -1,5 +1,5 @@
 // Contact page
-import { Drash } from "../dependencies.js";
+import { Drash } from "../../dependencies.js";
 
 export class ContactResource extends Drash.Http.Resource {
 

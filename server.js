@@ -3,12 +3,15 @@ import { Drash } from "./dependencies.js";
 // Drash resources
 import { 
   HomeResource,
+  // pages
   ContactResource,
   AboutResource,
   PricingResource,
   NewTutorialFormResource,
   SingleTutorialResource,
   NotFoundResource,
+  // utilities
+  CheckTutorialSlugResource,
 }    from "./dependencies.js";
 
 
@@ -42,12 +45,15 @@ const server = new Drash.Http.Server({
   response_output: "text/html",
   resources: [
     HomeResource,
+    // pages
     ContactResource,
     AboutResource,
     PricingResource,
     NewTutorialFormResource,
     SingleTutorialResource,
     NotFoundResource,
+    // utilities
+    CheckTutorialSlugResource,
   ],
   middleware: {
     after_resource: [

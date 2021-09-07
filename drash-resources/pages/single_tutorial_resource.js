@@ -1,7 +1,7 @@
 // Single tutorial page template 
-import { Drash } from "../dependencies.js";
-import { rimu }  from "../dependencies.js";
-import { tutorialsDB } from "../database/database.js";
+import { Drash } from "../../dependencies.js";
+import { rimu }  from "../../dependencies.js";
+import { tutorialsDB } from "../../database/database.js";
 
 export class SingleTutorialResource extends Drash.Http.Resource {
 
@@ -16,8 +16,7 @@ export class SingleTutorialResource extends Drash.Http.Resource {
       const foundTutorial = await tutorialsDB.findOne({ slug: tutorialSlug });
       
       if (foundTutorial == null) {
-        this.response.body = "tutorial is not found.";
-        return this.response;
+        return this.response.redirect(301, "/404");
       }
       let localeDateString = new Date(foundTutorial.published_unix_time).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: '2-digit'});
       let renderedTutorialBody = rimu.render(foundTutorial.body);

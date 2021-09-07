@@ -1,21 +1,18 @@
-// About us page
-import { Drash } from "../dependencies.js";
+import { Drash } from "../../dependencies.js";
 
 
-export class AboutResource extends Drash.Http.Resource {
+export class PricingResource extends Drash.Http.Resource {
 
   static paths = [
-    "/about",
-    "/about_us",
-    "/team"
+    "/pricing"
   ];
 
   async GET() {
     try {
       this.response.body = await this.response.render(
-        Deno.cwd() + "/public/views/pages/about",
+        Deno.cwd() + "/public/views/pages/pricing",
         {
-          page_title: "About",
+          page_title: "Pricing",
         },
       );
     } catch (error) {

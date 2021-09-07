@@ -1,19 +1,21 @@
-import { Drash } from "../dependencies.js";
+// About us page
+import { Drash } from "../../dependencies.js";
 
 
-export class NotFoundResource extends Drash.Http.Resource {
+export class AboutResource extends Drash.Http.Resource {
 
   static paths = [
-    "/not_found",
-    "/404",
+    "/about",
+    "/about_us",
+    "/team"
   ];
 
   async GET() {
     try {
       this.response.body = await this.response.render(
-        Deno.cwd() + "/public/views/pages/404",
+        Deno.cwd() + "/public/views/pages/about",
         {
-          page_title: "404 | Not Found",
+          page_title: "About",
         },
       );
     } catch (error) {
