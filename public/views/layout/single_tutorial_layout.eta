@@ -9,6 +9,11 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.9/components.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.9/base.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.9/utilities.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/a11y-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  
   <!-- Custom css -->
   <link href="<%= it.first_custom_css_import %>" rel="stylesheet">
   <title><%= it.page_title %></title>

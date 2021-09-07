@@ -2,6 +2,9 @@
 
 <!-- Content start -->
 
+<%= it.page_title %>
+<%= it.tutorial_published_date %>
+
 <%~ it.tutorial_body %>
 
 <!-- Content end -->
