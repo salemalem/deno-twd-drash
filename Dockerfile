@@ -1,4 +1,5 @@
 FROM denoland/deno:1.13.2
+EXPOSE 8080
 WORKDIR /app
 USER deno
 COPY server.js dependencies.* ./
