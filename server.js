@@ -12,7 +12,7 @@ import {
   NotFoundResource,
   // utilities
   CheckTutorialSlugResource,
-}    from "./dependencies.js";
+} from "./dependencies.js";
 
 
 import { Tengine } from "./dependencies.js";
@@ -62,6 +62,11 @@ const server = new Drash.Http.Server({
   },
   static_paths: ["/public"],
 });
+
+/*
+to publish at fly.io => hostname: "0.0.0.0"
+to work locally      => hostname: "localhost"
+*/
 
 server.run({
   // hostname: "localhost",

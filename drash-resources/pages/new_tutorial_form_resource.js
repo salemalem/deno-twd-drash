@@ -3,7 +3,18 @@ import { Drash } from "../../dependencies.js";
 import { tutorialsDB } from "../../database/database.js";
 import { decodeQueryParam } from "../../utilities/decode_query_param.js";
 
-
+// source: https://stackoverflow.com/questions/1053902/how-to-convert-a-title-to-a-url-slug-in-jquery
+function slugify(string) {
+  return string
+    .toString()
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\-]+/g, "")
+    .replace(/\-\-+/g, "-")
+    .replace(/^-+/, "")
+    .replace(/-+$/, "");
+}
 export class NewTutorialFormResource extends Drash.Http.Resource {
 
   static paths = [
@@ -29,10 +40,13 @@ export class NewTutorialFormResource extends Drash.Http.Resource {
   }
   async POST() {
     try {
+      let rawSlug = decodeQueryParam(this.request.getBodyParam("slug"));
+      let slug = slugify(rawSlug);
+
       const tutorial = {
         title:               decodeQueryParam(this.request.getBodyParam("title")),
         description:         decodeQueryParam(this.request.getBodyParam("description")),
-        slug:                decodeQueryParam(this.request.getBodyParam("slug")),
+        slug:                slug,
         body:                decodeQueryParam(this.request.getBodyParam("body")),
         published_unix_time: Date.now(),
       };
