@@ -1,13 +1,9 @@
 # fly.toml file generated for blogengine on 2021-09-04T21:39:21+06:00
-
 app = "blogengine"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
-
-[build]
-  builtin = "deno"
 
 [env]
 
