@@ -12,6 +12,8 @@ import {
   NotFoundResource,
   // utilities
   CheckTutorialSlugResource,
+  // testing
+  SavingRenderAsHtmlResource,
 } from "./dependencies.js";
 
 
@@ -54,6 +56,8 @@ const server = new Drash.Http.Server({
     NotFoundResource,
     // utilities
     CheckTutorialSlugResource,
+    // testing
+    SavingRenderAsHtmlResource,
   ],
   middleware: {
     after_resource: [

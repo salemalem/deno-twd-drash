@@ -9,7 +9,7 @@
   },
   "watcher": {
     "interval": 350,
-    "exts": ["js", "eta", "html", "css"],
+    "exts": ["js", "eta", "css"],
     "match": ["**/*.*"]
   },
 
