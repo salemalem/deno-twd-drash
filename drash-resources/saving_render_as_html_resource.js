@@ -1,5 +1,9 @@
 // Index page
 import { Drash } from "../dependencies.js";
+
+const decoder = new TextDecoder();
+
+
 export class SavingRenderAsHtmlResource extends Drash.Http.Resource {
   static paths = ["/test/saving_render_as_html"];
 
@@ -31,9 +35,10 @@ export class SavingRenderAsHtmlResource extends Drash.Http.Resource {
             ]
           },
         );
-        console.log(htmlFile);
         Deno.writeTextFileSync(`${Deno.cwd()}/generated.html`, htmlFile);
-        this.response.body = "html is generated";
+        let fileContentsRaw = Deno.readFileSync(Deno.cwd() + "/generated.html");
+        let template = decoder.decode(fileContentsRaw);
+        this.response.body = template;
     } catch (error) {
       throw new Drash.Exceptions.HttpException(
         400,
