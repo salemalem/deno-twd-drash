@@ -4,7 +4,7 @@
   <br>
   <img height="200vh" src="repo-assets/images/opossum.png">
 	<br>
-  <h2>deno-twd-drash</h2>
+  <h2 style="display: inline;">deno-twd-drash</h2>
 </p>
 Blog engine powered by Tailwind CSS + Drash as a Deno framework
 
