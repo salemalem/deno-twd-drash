@@ -13,7 +13,7 @@ import {
   // utilities
   CheckTutorialSlugResource,
   // testing
-  SavingRenderAsHtmlResource,
+  
 } from "./dependencies.js";
 
 
@@ -57,7 +57,6 @@ const server = new Drash.Http.Server({
     // utilities
     CheckTutorialSlugResource,
     // testing
-    SavingRenderAsHtmlResource,
   ],
   middleware: {
     after_resource: [
