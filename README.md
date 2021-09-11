@@ -3,7 +3,7 @@
 <div style="margin-left: 20vh; margin-right: auto;">
   <div style="display: flex; align-items:flex-start;">
     <img height="200vh" src="repo-assets/images/opossum.png">
-    <h2>deno-twd-drash</h2>
+    <h1>deno-twd-drash</h1>
   </div>
 </div>
 Blog engine powered by Tailwind CSS + Drash as a Deno framework
