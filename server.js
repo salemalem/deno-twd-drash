@@ -45,6 +45,11 @@ const server = new Drash.Http.Server({
   }),
   directory: Deno.cwd(),
   response_output: "text/html",
+  /*
+  Every resource contains post request that renders and saves html files at /dist
+  only get requests are needed for users
+  post requests are called by ship_to_dist.js using fetch function
+  */
   resources: [
     HomeResource,
     // pages
