@@ -20,6 +20,10 @@ or
 deno run --unstable -A server.js
 ```
 #### for testing dist
+/dist contains static files html, css
+It can be shipped to server 
+because most static hosting companies
+host for free
 ```cmd
 deno run -A ship_to_dist.js
 ```
